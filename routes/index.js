@@ -7,8 +7,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/api/uploadImage', function(req,res,next){
-  console.log(req);
-  res.sendStatus(200);
+  console.error(`Request ID . ${req.headers['x-request-id']}`)
+  // res.sendStatus(200);
+  res.status(200).end();
 });
 
 module.exports = router;
